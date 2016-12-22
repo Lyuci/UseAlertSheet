@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  UseAlertSheet
 //
-//  Created by 李娜 on 2016/12/22.
+//  Created by Lyuci on 2016/12/22.
 //  Copyright © 2016年 Lyuci. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "AlertWindowViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    AlertWindowViewController *alert = [[AlertWindowViewController alloc] init];
+    self.window.rootViewController = alert;
+    
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 
